@@ -1,8 +1,12 @@
-const App=()=>{
+import { RouterProvider } from "react-router-dom"
+import routers from "./Routes/AppRoutes"
+import ErrorBoundary from "./Components/Error/ErrorBoundary"
+
+const App = () => {
   return (
-    <div>
-      <h1>Hello Frontend</h1>
-    </div>
+    <ErrorBoundary>
+      <RouterProvider router={routers} />
+    </ErrorBoundary>
   )
 }
 
